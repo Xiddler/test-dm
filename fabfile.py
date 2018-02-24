@@ -140,7 +140,7 @@ def gh_pages():
                 puts("Pushed commit {} to GitHub Pages".format(commit_sha))
             else:
                 # reset the git repo to the one on GitHub Pages
-                local('git reset origin/master')
+                local('git reset origin -- master')
                 puts("Exiting on user request.")
         else:
             puts("Nothing has changed. Exiting.")
