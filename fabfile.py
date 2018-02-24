@@ -122,7 +122,7 @@ def gh_pages():
     with lcd(env.deploy_path):
         # sync local GitHub Pages git repository with remote repository
         local('git fetch origin {github_pages_branch}'.format(**env))
-        local('git reset --hard origin/{github_pages_branch}'.format(**env))
+        local('git reset --hard origin {github_pages_branch}'.format(**env))
 
     clean()
     # build a production version of the site
